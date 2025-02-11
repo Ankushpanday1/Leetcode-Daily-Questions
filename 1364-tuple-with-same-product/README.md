@@ -5,7 +5,7 @@
 
 <pre>
 <strong>Input:</strong> nums = [2,3,4,6]
-<strong>Output:</strong> 8
+<strong>Output:</strong> 8 
 <strong>Explanation:</strong> There are 8 valid tuples:
 (2,6,3,4) , (2,6,4,3) , (6,2,3,4) , (6,2,4,3)
 (3,4,2,6) , (4,3,2,6) , (3,4,6,2) , (4,3,6,2)
