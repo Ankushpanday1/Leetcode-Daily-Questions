@@ -1,15 +1,21 @@
 class Solution {
 public:
     bool checkRecord(string s) {
-        int count = 0;
-        for (auto& ch : s) {
-            if (ch == 'A') {
-                count++;
-                if (count >= 2) {
-                    return false;
-                }
+        int lateCount = 0;
+        int absentCount = 0;
+
+        for(int i = 0; i < s.size(); ++i) {
+            if(s[i] == 'A') {
+                absentCount++;
+                if(absentCount >= 2) return false;
+            }
+            if(s[i] == 'L') {
+                lateCount++;
+                if(lateCount == 3) return false;
+            } else {
+                lateCount = 0;
             }
         }
-        return s.find("LLL") == string::npos;  // Check if "LLL" is not found
+        return absentCount < 2 && lateCount < 3;
     }
 };
